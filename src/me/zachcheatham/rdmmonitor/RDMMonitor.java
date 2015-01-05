@@ -67,6 +67,11 @@ public class RDMMonitor implements LogListenerCallback, ItemListener
 				logListener = new LogListener(this, "C:\\Program Files (x86)\\Steam\\SteamApps\\common\\GarrysMod\\garrysmod\\console.log");
 				requiredFile = null;
 			}
+			else if (new File("D:\\Games\\SteamApps\\").exists())
+			{
+				logListener = new LogListener(this, "D:\\Games\\SteamApps\\common\\GarrysMod\\garrysmod\\console.log");
+				requiredFile = null;
+			}
 			else
 			{
 				requiredFile = "C:\\Program Files (x86)\\Steam\\SteamApps\\common\\GarrysMod\\garrysmod\\console.log";
@@ -85,7 +90,7 @@ public class RDMMonitor implements LogListenerCallback, ItemListener
 				requiredFile = "C:\\Program Files\\Steam\\SteamApps\\common\\GarrysMod\\garrysmod\\console.log";
 				logListener = null;
 			}
-		}			
+		}
 				
 		lastUpdateLabel = new JLabel("Waiting for first damage log...");
 		playerFilter = new JComboBox<String>();
